@@ -1,0 +1,22 @@
+{
+  "name": "validation-api",
+  "version": "1.0.0",
+  "description": "My flutterwave technical challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Gifted-s/Flutterwave-Challenge"
+  },
+  "author": "Adewumi Sunkanmi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "jest": "^26.6.3"
+  }
+}
