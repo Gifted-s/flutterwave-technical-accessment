@@ -1,4 +1,4 @@
-# Flutterwave Technical Accessment 
+# Flutterwave Technical Assessment 
 
 ## Root [ v1-flutterwave-assessment.herokuapp.com ]
 
