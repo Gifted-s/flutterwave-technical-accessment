@@ -6,27 +6,27 @@ function validateBody(requestBody) {
     if (!rule && !data) {
         return createErrorBody("Invalid JSON payload passed.")
     }
-    // checking if rule field exist in the body passed
+    // checking if rule field does not exist in the body passed
     if (!rule) {
         return createErrorBody("rule is required.")
     }
-    //checking if data field exist in the request body passed
+    //checking if data field does not exist in the request body passed
     if (!data) {
         return createErrorBody("data is required.")
     }
-    // checking if type of rule is an object
+    // checking if type of rule is not an object
     if (typeof rule !== 'object') {
         return createErrorBody("rule should be an object.")
     }
 
-    // checking if type of data is an object, string or array which are the accepted data types
+    // checking if type of data is not an object,a string or an array which are the accepted data types
     if (typeof data !== 'object' && typeof data !== 'string' && !Array.isArray(data)) {
         return createErrorBody("data is required.")
     }
 
     // if rule field is an object then check if it has the required nested fields  which includes [field], [condition] and [condition_value], code below
 
-    //check if [field] field exists in rule object
+    //check if [field] field does not exist in rule object
     if (!rule['field']) {
         return createErrorBody("rule.field is required.")
     }
@@ -71,7 +71,7 @@ function validateBody(requestBody) {
 
 
 
-    //check if [condition] field exists in rule object
+    //check if [condition] field does not exist in rule object
     if (!rule['condition']) {
         return createErrorBody("rule.condition is required.")
 
@@ -86,7 +86,7 @@ function validateBody(requestBody) {
     if (!conditions[rule['condition']]) {
       return   createErrorBody("rule.condition is required.")
     }
-    //check if [condition_value] field exists in rule object
+    //check if [condition_value] field does not exist in rule object
     if (! rule['condition_value']) {
         return createErrorBody("rule.condition_value is required.")
     }
