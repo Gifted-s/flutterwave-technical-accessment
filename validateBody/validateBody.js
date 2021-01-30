@@ -31,7 +31,7 @@ function validateBody(requestBody) {
         return createErrorBody("rule.field is required.")
     }
 
-    //check if [field] field type in rule object is a string
+    //check if [field] field type in rule object is not a string
     if (typeof rule['field'] !== 'string') {
         return createErrorBody("rule.field should be a string.")
     }
