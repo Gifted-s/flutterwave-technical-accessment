@@ -32,7 +32,7 @@ app.post('/validate-rule', (req, res) => {
     const validateFieldResponse = validateField(req.body)
 
     // is field invalid
-    if (! validateFieldResponse.status === "error") {
+    if (validateFieldResponse.status === "error") {
 
         //return error response with error body
         return res.status(400).send( validateFieldResponse)
